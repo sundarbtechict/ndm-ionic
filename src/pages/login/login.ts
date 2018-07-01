@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, MenuController, NavController, NavParams } from 'ionic-angular';
 import { SignupPage } from '../signup/signup';
-import {HomePage} from "../home/home";
+import {ReportIncidentPage} from "../report-incident/report-incident";
 
 /**
  * Generated class for the LoginPage page.
@@ -25,7 +25,7 @@ export class LoginPage {
   }
   onLogin()
   {
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.setRoot(ReportIncidentPage);
   }
   onSignup(){
     this.navCtrl.push(SignupPage);

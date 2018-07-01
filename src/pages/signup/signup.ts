@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, MenuController, NavController, NavParams ,App} from 'ionic-angular';
-import { HomePage } from '../home/home';
+import {ReportIncidentPage} from "../report-incident/report-incident";
 
 
 
@@ -28,7 +28,7 @@ export class SignupPage {
 
   }
   onSignup(){
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.setRoot(ReportIncidentPage);
   }
   onBack(){
     this.navCtrl.pop();
