@@ -1,0 +1,62 @@
+<!--
+  Generated template for the EditAccountPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Edit Account</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <form #loginForm="ngForm" novalidate>
+    <ion-list no-lines>
+      <ion-item>
+        <ion-label stacked color="primary">Name</ion-label>
+        <ion-input  name="name" type="text"
+                    required>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked color="primary">Mobile</ion-label>
+        <ion-input  name="mobile" type="text" required>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked color="primary">Email</ion-label>
+        <ion-input  name="email" type="text" required>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked color="primary">Username</ion-label>
+        <ion-input  name="username" type="text" spellcheck="false" autocapitalize="off"
+                    required>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked color="primary">Password</ion-label>
+        <ion-input  name="password" type="password"  required>
+        </ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-row responsive-sm>
+      <ion-col>
+        <button ion-button (click)="onSignup()" type="submit" block>Update</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button (click)="onBack()" color="light" block>Cancel</button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
