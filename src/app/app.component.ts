@@ -3,9 +3,6 @@ import { Nav,Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
-import { HomePage } from '../pages/home/home';
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
 import { ReportIncidentPage } from '../pages/report-incident/report-incident';
 import { IncidentHistoryPage } from '../pages/incident-history/incident-history';
 import { EmergencyNoPage } from '../pages/emergency-no/emergency-no';
@@ -20,6 +17,7 @@ import { LogoutPage } from '../pages/logout/logout';
 export class MyApp {
   rootPage:any = LoginPage;
   @ViewChild(Nav) nav:Nav;
+  activePage: any;
 
   pages : Array<{title: String, component:any}>;
 
@@ -32,9 +30,6 @@ export class MyApp {
     this.intializeApp();
 
     this.pages = [
-      {title: "Home", component: HomePage},
-      {title: "About", component: AboutPage},
-      {title: "Contact", component: ContactPage},
       {title: "Report Incident", component: ReportIncidentPage},
       {title: "Incident History", component: IncidentHistoryPage},
       {title: "Emergency Numbers", component: EmergencyNoPage},
@@ -43,7 +38,7 @@ export class MyApp {
       {title: "Edit Account", component: EditAccountPage},
       {title: "Logout", component: LoginPage}
     ];
-
+    this.activePage=this.pages[0];
   }
   intializeApp(){
     this.platform.ready().then(() => {
@@ -55,7 +50,10 @@ export class MyApp {
   }
   openPage(page)
   {
-    console.log(page.component);
-  this.nav.setRoot(page.component)  ;
+  this.nav.setRoot(page.component);
+  this.activePage=page;
+  }
+  checkActive(page){
+    return page == this.activePage;
   }
 }

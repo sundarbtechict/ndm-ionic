@@ -18,3 +18,7 @@
 .main-content {
   height: 100%;
 }
+.activeColor{
+  color:map_get($colors,primary);
+  background-color:map_get($colors,light);
+}

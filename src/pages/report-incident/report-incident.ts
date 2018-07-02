@@ -1,7 +1,8 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
-
+import { AddressPage} from "../address/address";
+import { AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the ReportIncidentPage page.
@@ -21,9 +22,11 @@ export class ReportIncidentPage {
 
   @ViewChild('mapCanvas') mapElement: ElementRef;
 
-  constructor(public navCtrl: NavController, public geo: Geolocation) {
-
-  }
+  constructor(
+    public navCtrl: NavController,
+    public geo: Geolocation,
+    public alertCtrl: AlertController
+  ) { }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ReportIncidentPage');
@@ -51,5 +54,29 @@ export class ReportIncidentPage {
       map
     });
   }
+  onReport(){
+    const confirm = this.alertCtrl.create({
+      title: 'Confrimation',
+      message: 'Do you agree to report this incident?',
+      buttons: [
+        {
+          text: 'Disagree',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: 'Agree',
+          handler: () => {
+            console.log('Agree clicked');
+          }
+        }
+      ]
+    });
+    confirm.present();
 
+  }
+  onReportByAddress(){
+    this.navCtrl.push(AddressPage);
+  }
 }

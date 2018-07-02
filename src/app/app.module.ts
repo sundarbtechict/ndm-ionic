@@ -6,6 +6,7 @@ import { NativePageTransitions } from '@ionic-native/native-page-transitions';
 import { SignupPage } from '../pages/signup/signup';
 import { LoginPage } from '../pages/login/login';
 import { ReportIncidentPage } from '../pages/report-incident/report-incident';
+import { AddressPage} from "../pages/address/address";
 import { IncidentHistoryPage } from '../pages/incident-history/incident-history';
 import { EmergencyNoPage } from '../pages/emergency-no/emergency-no';
 import { SafetyTipsPage } from '../pages/safety-tips/safety-tips';
@@ -22,6 +23,7 @@ import { Geolocation } from '@ionic-native/geolocation';
     SignupPage,
     LoginPage,
     ReportIncidentPage,
+    AddressPage,
     IncidentHistoryPage,
     EmergencyNoPage,
     SafetyTipsPage,
@@ -39,6 +41,7 @@ import { Geolocation } from '@ionic-native/geolocation';
     SignupPage,
     LoginPage,
     ReportIncidentPage,
+    AddressPage,
     IncidentHistoryPage,
     EmergencyNoPage,
     SafetyTipsPage,

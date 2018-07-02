@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -17,5 +17,26 @@
 
 
 <ion-content>
-    <div #mapCanvas id="mapCanvas"></div>
+  <div #mapCanvas id="mapCanvas"></div>
+  <ion-item no-lines>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary">Incident Type</ion-label>
+    <ion-select color="primary">
+        <ion-option value="Incident 1">Incident 1</ion-option>
+        <ion-option value="Incident 2">Incident 2</ion-option>
+        <ion-option value="Incident 3">Incident 3</ion-option>
+        <ion-option value="Incident 4">Incident 4</ion-option>
+        <ion-option value="Incident 5">Incident 5</ion-option>
+        <ion-option value="Incident 6">Incident 6</ion-option>
+      </ion-select>
+  </ion-item>
+  <ion-row responsive-sm>
+    <ion-col>
+      <button ion-button (click)="onReport()" type="submit" block>Report</button>
+    </ion-col>
+    <ion-col>
+      <button ion-button (click)="onReportByAddress()" color="light" block>Report By Address</button>
+    </ion-col>
+  </ion-row>
 </ion-content>

@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -18,153 +18,16 @@
 
   <ion-content class="list-avatar-page">
     <ion-list>
-
-      <ion-list-header>Today</ion-list-header>
-
-      <ion-item>
+      <ion-item *ngFor="let incident of incidents">
         <ion-avatar item-start>
-          3:43 pm
+            {{incident.time}}
         </ion-avatar>
-        <h2>Woody</h2>
-        <p>This town ain't big enough for the two of us!</p>
+        <h2>{{incident.title}}</h2>
+        <p>{{incident.date}}</p>
         <ion-note item-end>
-          <ion-icon name="arrow-forward" color="primary"></ion-icon>
+          <button ion-button round icon-only (click)="show(incident)"><ion-icon name="arrow-forward" color="light"></ion-icon></button>
         </ion-note>
       </ion-item>
-
-      <ion-item>
-        <ion-avatar item-start>
-          1:12 pm
-        </ion-avatar>
-        <h2>Buzz Lightyear</h2>
-        <p>My eyeballs could have been sucked from their sockets!</p>
-        <ion-note item-end>
-          <ion-icon name="arrow-forward" color="primary"></ion-icon>
-        </ion-note>
-      </ion-item>
-
-      <ion-item>
-        <ion-avatar item-start>
-          10:03 am
-        </ion-avatar>
-        <h2>Jessie</h2>
-        <p>Well aren't you just the sweetest space toy I ever did meet!</p>
-        <ion-note item-end>
-          <ion-icon name="arrow-forward" color="primary"></ion-icon>
-        </ion-note>
-      </ion-item>
-
-      <ion-item>
-        <ion-avatar item-start>
-          5:47 am
-        </ion-avatar>
-        <h2>Mr. Potato Head</h2>
-        <p>You're not turning me into a Mashed Potato.</p>
-        <ion-note item-end>
-          <ion-icon name="arrow-forward" color="primary"></ion-icon>
-        </ion-note>
-      </ion-item>
-
-    </ion-list>
-
-    <ion-list>
-
-      <ion-list-header>Yesterday</ion-list-header>
-
-      <ion-item>
-        <ion-avatar item-start>
-          3:43 pm
-        </ion-avatar>
-        <h2>Woody</h2>
-        <p>This town ain't big enough for the two of us!</p>
-        <ion-note item-end>
-          <ion-icon name="arrow-forward" color="primary"></ion-icon>
-        </ion-note>
-      </ion-item>
-
-      <ion-item>
-        <ion-avatar item-start>
-          1:12 pm
-        </ion-avatar>
-        <h2>Buzz Lightyear</h2>
-        <p>My eyeballs could have been sucked from their sockets!</p>
-        <ion-note item-end>
-          <ion-icon name="arrow-forward" color="primary"></ion-icon>
-        </ion-note>
-      </ion-item>
-
-      <ion-item>
-        <ion-avatar item-start>
-          10:03 am
-        </ion-avatar>
-        <h2>Jessie</h2>
-        <p>Well aren't you just the sweetest space toy I ever did meet!</p>
-        <ion-note item-end>
-          <ion-icon name="arrow-forward" color="primary"></ion-icon>
-        </ion-note>
-      </ion-item>
-
-      <ion-item>
-        <ion-avatar item-start>
-          5:47 am
-        </ion-avatar>
-        <h2>Mr. Potato Head</h2>
-        <p>You're not turning me into a Mashed Potato.</p>
-        <ion-note item-end>
-          <ion-icon name="arrow-forward" color="primary"></ion-icon>
-        </ion-note>
-      </ion-item>
-
-    </ion-list>
-
-    <ion-list>
-
-      <ion-list-header>12/02/19</ion-list-header>
-
-      <ion-item>
-        <ion-avatar item-start>
-          3:43 pm
-        </ion-avatar>
-        <h2>Woody</h2>
-        <p>This town ain't big enough for the two of us!</p>
-        <ion-note item-end>
-          <ion-icon name="arrow-forward" color="primary"></ion-icon>
-        </ion-note>
-      </ion-item>
-
-      <ion-item>
-        <ion-avatar item-start>
-          1:12 pm
-        </ion-avatar>
-        <h2>Buzz Lightyear</h2>
-        <p>My eyeballs could have been sucked from their sockets!</p>
-        <ion-note item-end>
-          <ion-icon name="arrow-forward" color="primary"></ion-icon>
-        </ion-note>
-      </ion-item>
-
-      <ion-item>
-        <ion-avatar item-start>
-          10:03 am
-        </ion-avatar>
-        <h2>Jessie</h2>
-        <p>Well aren't you just the sweetest space toy I ever did meet!</p>
-        <ion-note item-end>
-          <ion-icon name="arrow-forward" color="primary"></ion-icon>
-        </ion-note>
-      </ion-item>
-
-      <ion-item>
-        <ion-avatar item-start>
-          5:47 am
-        </ion-avatar>
-        <h2>Mr. Potato Head</h2>
-        <p>You're not turning me into a Mashed Potato.</p>
-        <ion-note item-end>
-          <ion-icon name="arrow-forward" color="primary"></ion-icon>
-        </ion-note>
-      </ion-item>
-
     </ion-list>
 
 </ion-content>
