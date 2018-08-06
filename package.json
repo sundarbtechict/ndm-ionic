@@ -58,12 +58,20 @@
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
       "com.telerik.plugins.nativepagetransitions": {},
-      "cordova-plugin-googlemaps": {},
+      "cordova-plugin-googlemaps": {
+        "API_KEY_FOR_ANDROID": "AIzaSyBdHGf_gNxLTr9ujo2o4X5EBdhW9qt6Cno",
+        "API_KEY_FOR_IOS": "AIzaSyBdHGf_gNxLTr9ujo2o4X5EBdhW9qt6Cno",
+        "PLAY_SERVICES_VERSION": "12.0.1",
+        "ANDROID_SUPPORT_V4_VERSION": "27.1.0",
+        "LOCATION_WHEN_IN_USE_DESCRIPTION": "This app wants to get your location while this app runs only.",
+        "LOCATION_ALWAYS_USAGE_DESCRIPTION": "This app wants to get your location always, even this app runs in background."
+      },
       "cordova-plugin-geolocation": {
         "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
       }
     },
     "platforms": [
+      "android",
       "ios"
     ]
   }
